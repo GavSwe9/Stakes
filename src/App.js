@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import './tailwind.css'
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Layout } from './Components/Layout'
+// import { Scoreboard } from './Components/Scoreboard'
+import { Optimizer } from './Components/Optimizer'
+import { NoMatch } from './Components/NoMatch'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Layout>
+        <Router>
+          <Switch>
+            {/* <Route path="/scoreboard" component={Scoreboard} /> */}
+            <Route exact path="/Optimizer" component={Optimizer} />
+            <Route component={NoMatch} />
+          </Switch>
+        </Router>
+      </Layout>
+    </React.Fragment>
   );
 }
 
