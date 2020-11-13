@@ -2,8 +2,8 @@ import React from 'react'
 
 export function LineupHeader(props) {
     return (
-        <div className="text-blue-100">
-            <div className="text-center border-b-2 border-blue-300 mx-6 mb-1">
+        <div className="text-green-200 font-medium">
+            <div className="text-center border-b-2 border-green-200 mx-6 mb-1">
                 <div xs={12} >
                     Lineup #{props.lineupData.lineupNo}
                 </div>

@@ -6,7 +6,7 @@ export function Lineup(props) {
     
     return (
         <div className="w-12/12 lg:w-6/12 xl:w-4/12 lg:inline-block align-top" >
-            <div className="bg-blue-600 mx-5 mb-5 rounded-lg">
+            <div className="bg-green-700 m-2 rounded-lg shadow-lg">
                 <LineupHeader lineupData={props.lineupData} />
                 <LineupPlayers lineupData={props.lineupData} />
             </div>

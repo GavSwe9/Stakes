@@ -6,44 +6,74 @@ export function Options(props) {
 
     return (
         <React.Fragment>
-            <OptionsMobile setNoLineups={props.setNoLineups} 
-                isGpp={props.isGpp} 
-                setIsGpp={props.setIsGpp} 
+            <OptionsMobile
+                downloadable={props.downloadable}
+                downloadCsv={props.downloadCsv}
                 runOptimizer={props.runOptimizer}
+                noLineups={props.noLineups}
+                setNoLineups={props.setNoLineups}
+                isGpp={props.isGpp}
+                setIsGpp={props.setIsGpp}
+                maxOverlap={props.maxOverlap}
                 setMaxOverlap={props.setMaxOverlap}
-                setTeamsToRemove = {props.setTeamsToRemove}
-                setQbRepeat = {props.setQbRepeat}
-                setPlayerRepeat = {props.setPlayerRepeat}
-                setDstRepeat = {props.setDstRepeat}
-                setMaxTe = {props.setMaxTe}
+                teamsToRemove={props.eamsToRemove}
+                setTeamsToRemove={props.setTeamsToRemove}
+                qbRepeat={props.qbRepeat}
+                setQbRepeat={props.setQbRepeat}
+                playerRepeat={props.playerRepeat}
+                setPlayerRepeat={props.setPlayerRepeat}
+                dstRepeat={props.dstRepeat}
+                setDstRepeat={props.setDstRepeat}
+                maxTe={props.maxTe}
+                setMaxTe={props.setMaxTe}
 
                 //GPP Inputs
-                setMaxOwnership = {props.setMaxOwnership}
-                setPopularThreshold = {props.setPopularThreshold}
-                setnumPopular = {props.setnumPopular}
-                setStackMin = {props.setStackMin}
-                bringBack = {props.bringBack}
-                setBringBack =  {props.setBringBack} />
+                maxOwnership={props.maxOwnership}
+                setMaxOwnership={props.setMaxOwnership}
+                popularThreshold={props.popularThreshold}
+                setPopularThreshold={props.setPopularThreshold}
+                numPopular={props.numPopular}
+                setNumPopular={props.setNumPopular}
+                stackMin={props.stackMin}
+                setStackMin={props.setStackMin}
+                bringBack={props.bringBack}
+                setBringBack={props.setBringBack}
+            />
 
-            <OptionsDesktop setNoLineups={props.setNoLineups} 
-                isGpp={props.isGpp} 
-                setIsGpp={props.setIsGpp} 
+            <OptionsDesktop
+                downloadable={props.downloadable}
+                downloadCsv={props.downloadCsv}
                 runOptimizer={props.runOptimizer}
+                noLineups={props.noLineups}
+                setNoLineups={props.setNoLineups}
+                isGpp={props.isGpp}
+                setIsGpp={props.setIsGpp}
+                maxOverlap={props.maxOverlap}
                 setMaxOverlap={props.setMaxOverlap}
-                setTeamsToRemove = {props.setTeamsToRemove}
-                setQbRepeat = {props.setQbRepeat}
-                setPlayerRepeat = {props.setPlayerRepeat}
-                setDstRepeat = {props.setDstRepeat}
-                setMaxTe = {props.setMaxTe}
+                teamsToRemove={props.eamsToRemove}
+                setTeamsToRemove={props.setTeamsToRemove}
+                qbRepeat={props.qbRepeat}
+                setQbRepeat={props.setQbRepeat}
+                playerRepeat={props.playerRepeat}
+                setPlayerRepeat={props.setPlayerRepeat}
+                dstRepeat={props.dstRepeat}
+                setDstRepeat={props.setDstRepeat}
+                maxTe={props.maxTe}
+                setMaxTe={props.setMaxTe}
 
                 //GPP Inputs
-                setMaxOwnership = {props.setMaxOwnership}
-                setPopularThreshold = {props.setPopularThreshold}
-                setnumPopular = {props.setnumPopular}
-                setStackMin = {props.setStackMin}
-                bringBack = {props.bringBack}
-                setBringBack =  {props.setBringBack}/>
-                
+                maxOwnership={props.maxOwnership}
+                setMaxOwnership={props.setMaxOwnership}
+                popularThreshold={props.popularThreshold}
+                setPopularThreshold={props.setPopularThreshold}
+                numPopular={props.numPopular}
+                setNumPopular={props.setNumPopular}
+                stackMin={props.stackMin}
+                setStackMin={props.setStackMin}
+                bringBack={props.bringBack}
+                setBringBack={props.setBringBack}
+            />
+
         </React.Fragment>
 
 

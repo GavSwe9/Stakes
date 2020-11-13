@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.teamPlayerStatGraph {
+    @apply shadow-md;
+    @apply mr-3;
+    @apply my-3;
+    @apply rounded-lg;
+    @apply bg-white
+  }
