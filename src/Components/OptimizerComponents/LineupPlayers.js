@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function LineupPlayers(props){
+export function LineupPlayers(props) {
     let sortPosition = new Map();
     sortPosition.set("QB", 0);
     sortPosition.set("RB", 1);
@@ -15,18 +15,42 @@ export function LineupPlayers(props){
     });
 
     let lineup = players.map((p, i) =>
-        <div key={p.player} className={i !== players.length - 1 ? "bg-blue-200 text-blue-900 px-4 border-b-2 border-blue-700" : "bg-blue-200 text-blue-900 px-4 rounded-b-lg"}>
-            <div className="inline-block w-1/12 align-top pt-2">{p.position}</div>
-            <div className="inline-block w-6/12 align-top pt-2">
-                {p.player}
+        <div key={p.player} className={`${i !== players.length - 1 ? " border-b-2 border-green-700" : "rounded-b-lg"} bg-white text-green-700 px-4 font-light text-sm lg:text-base`}>
+            <div className="inline-block w-1/3">
+                <div className="inline-block w-3/12 align-top pt-2">
+                    {p.position}
+                </div>
+                <div className="inline-block w-9/12 align-top pt-2 font-medium">
+                    {formatName(p.player, p.position === "DST")}
+                </div>
             </div>
-            <div className="inline-block w-2/12 align-top pt-2">
-                {p.projection.toFixed(1)}
+
+            <div className="inline-block w-2/3 text-center">
+                <div className="inline-block w-1/5 align-top">
+                    <img className="h-10 w-10 p-1 inline-block" src={"https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/" + p.team + ".svg"} />
+                    {/* <img className="h-10 w-10 inline-block float-right " src={"https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/" + p.opponent + ".svg"} /> */}
+                </div>
+                <div className="inline-block w-1/5 align-top">
+                    {/* <img className="h-10 w-10 inline-block float-left " src={"https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/" + p.team + ".svg"} /> */}
+                    <img className="h-10 w-10 p-1 inline-block" src={"https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/" + p.opponent + ".svg"} />
+                </div>
+                <div className="inline-block w-1/5 align-top pt-2">
+                    <div>
+                        {p.projection.toFixed(1)}
+                    </div>
+                </div>
+                <div className="inline-block w-1/5 align-top pt-2">
+                    <div>
+                        {p.salary}
+                    </div>
+                </div>
+                <div className="inline-block w-1/5 align-top pt-2">
+                    <div>
+                        {p.dkOwnership + "%"}
+                    </div>
+                </div>
             </div>
-            <div className="inline-block w-3/12 align-top">
-                <img className="h-10 w-10 inline-block float-left" src={"https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/" + p.team + ".svg"} />
-                <img className="h-10 w-10 inline-block float-right" src={"https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/" + p.opponent + ".svg"} />
-            </div>
+
         </div>
     )
 
@@ -35,4 +59,17 @@ export function LineupPlayers(props){
             {lineup}
         </React.Fragment>
     )
+
+    function formatName(name, isDefense){
+        if (isDefense){
+            return name.split(" ")[0];
+        }
+
+        let nameArr = name.split(" ");
+        let returnName = nameArr[0].charAt(0) + ".";
+        for (let i = 1; i < nameArr.length; i++){
+            returnName += " " + nameArr[i];
+        }
+        return returnName;
+    }
 }

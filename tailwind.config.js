@@ -23,6 +23,41 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      team: {
+        BUF: "#00338D",
+        MIA: "#008E97",
+        NE: "#002244",
+        NYJ: "#125740",
+        PIT: "#FFB612",
+        BAL: "#241773",
+        CLE: "#311D00",
+        CIN: "#FB4F14",
+        TEN: "#0C2340",
+        IND: "#002C5F",
+        HOU: "#03202F",
+        JAX: "#D7A22A",
+        KC: "#E31837",
+        LV: "#000000",
+        LAC: "#002A5E",
+        DEN: "#FB4F14",
+        PHI: "#004C54",
+        WAS: "#773141",
+        DAL: "#003594",
+        NYG: "#0B2265",
+        CHI: "#0B162A",
+        GB: "#203731",
+        DET: "#0076B6",
+        MIN: "#4F2683",
+        TB: "#D50A0A",
+        NO: "#D3BC8D",
+        CAR: "#0085CA",
+        ATL: "#A71930",
+        SEA: "#69BE28",
+        ARI: "#97233F",
+        LA: "#003594",
+        SF: "#AA0000",
+      },
+
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -154,6 +189,9 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+
+      '33%': '33%',
+      '66%': '66%'
     },
     backgroundColor: theme => theme('colors'),
     backgroundImage: {
@@ -337,6 +375,8 @@ module.exports = {
       ...negative(theme('spacing')),
     }),
     maxHeight: {
+      '12': '3rem',
+      '1000px': '1000px',
       full: '100%',
       screen: '100vh',
     },
@@ -648,6 +688,7 @@ module.exports = {
       opacity: 'opacity',
       shadow: 'box-shadow',
       transform: 'transform',
+      maxHeight: 'max-height'
     },
     transitionTimingFunction: {
       linear: 'linear',
